@@ -4,7 +4,8 @@ class TagManipulator():
         result = []
 
         tempResult = re.split( regex, tags )
-        if( len(tempResult[0]) > 0 ):
-            result = tempResult  
+        for e in tempResult:
+            if (len(e) > 0):
+                result.append(e.strip())
 
         return result
