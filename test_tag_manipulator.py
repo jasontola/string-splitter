@@ -69,3 +69,16 @@ def test_split_comma_word_expect_word():
     # assert
     assert result == expResult
 
+def test_split_word_comma_expect_word():
+    # arrange
+    stringToSplit = "java,"
+    regex = ","
+    expResult = ["java"]
+    result = None
+    cut = TagManipulator()
+
+    # act
+    result = cut.parse_string(stringToSplit, regex)
+
+    # assert
+    assert result == expResult
